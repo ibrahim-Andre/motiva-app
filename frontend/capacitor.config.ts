@@ -5,5 +5,11 @@ const config: CapacitorConfig = {
   appName: 'Taxi',
   webDir: 'build'
 };
+const config: CapacitorConfig = {
+  appId: 'com.ibrahim.motiva',
+  appName: 'Motiva',
+  webDir: 'build',
+  backgroundColor: '#020817'
+};
 
 export default config;
