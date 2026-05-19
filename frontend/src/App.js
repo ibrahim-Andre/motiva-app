@@ -19,6 +19,7 @@ import DriverVehicles from "./pages/driver/DriverVehicles";
 function App() {
 	
   return (
+  <div className="safe-area">
     <BrowserRouter>
 	<GlobalStyle />
       <Routes>
@@ -66,6 +67,7 @@ function App() {
 
       </Routes>
     </BrowserRouter>
+	</div>
   );
 }
 
