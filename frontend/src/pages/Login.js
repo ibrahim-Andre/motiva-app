@@ -15,7 +15,11 @@ const Page = styled.div`
 const Card = styled.div`
   width: 100%;
   max-width: 420px;
-  background: white;
+  background: rgba(15, 23, 42, 0.92);
+backdrop-filter: blur(12px);
+border: 1px solid rgba(255,255,255,0.08);
+box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+color: white;
   border-radius: 16px;
 
   padding: 40px 30px;
@@ -30,11 +34,22 @@ const Input = styled.input`
   width: 100%;
   padding: 14px;
   margin-bottom: 15px;
+  background: #111827;
+border: 1px solid #374151;
+color: white;
+border-radius: 10px;
+font-size: 16px;
 `;
 
 const Button = styled.button`
   width: 100%;
   padding: 14px;
+  background: #facc15;
+color: black;
+border: none;
+border-radius: 10px;
+font-weight: bold;
+font-size: 16px;
 `;
 
 const Error = styled.p`

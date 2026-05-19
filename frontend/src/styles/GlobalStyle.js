@@ -8,6 +8,9 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     margin: 0;
+  padding: 0;
+  background: #020817;
+  overflow-x: hidden;
     font-family: Inter, system-ui, sans-serif;
   }
 
