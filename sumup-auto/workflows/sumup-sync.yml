@@ -1,0 +1,30 @@
+name: SumUp Sync
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+    
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Repo çek
+        uses: actions/checkout@v4
+
+      - name: Node kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Paketleri yükle
+        run: npm install
+
+      - name: SumUp Sync çalıştır
+        env:
+          REACT_APP_SUPABASE_URL: ${{ secrets.REACT_APP_SUPABASE_URL }}
+          SUPABASE_SERVICE_ROLE: ${{ secrets.SUPABASE_SERVICE_ROLE }}
+          SUMUP_API_KEY: ${{ secrets.SUMUP_API_KEY }}
+        run: node sumupSync.js
