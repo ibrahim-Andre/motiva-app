@@ -111,7 +111,7 @@ function Login() {
   return (
     <Page>
       <Card>
-        <h2>🚕 Taxi App</h2>
+        <div><h2>🚕 Motiva</h2></div>
 
         <Input
           placeholder="Kullanıcı Adı"
