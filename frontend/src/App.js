@@ -18,24 +18,6 @@ import DriverVehicles from "./pages/driver/DriverVehicles";
 
 function App() {
 	
-	const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 2500);
-
-    return () => clearTimeout(timer);
-  }, []);
-
-  if (loading) {
-    return (
-      <div className="splash-screen">
-        <img src="/splash.png" alt="Splash" className="splash-image" />
-      </div>
-    );
-  }
-	
   return (
   <div className="safe-area">
     <BrowserRouter>
@@ -85,7 +67,6 @@ function App() {
 
       </Routes>
     </BrowserRouter>
-	</div>
   );
 }
 
